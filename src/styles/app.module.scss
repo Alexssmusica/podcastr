@@ -6,8 +6,15 @@
     }
 
     @media screen and (max-width: 900px) {
-        display: flex;
-        flex-direction: column;
+
+            display: flex;
+            flex-direction: column;
+
+
+        main {
+            display: flex;
+        }
+
 
     }
 }
