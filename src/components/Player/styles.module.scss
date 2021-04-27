@@ -32,8 +32,8 @@
     @media screen and (max-width: 900px) {
 
         padding: 0;
-        width: 100%;
-        height: 7rem;
+        width: 100vw;
+        height: 8rem;
 
         background: var(--purple-500);
         color: var(--white);
@@ -47,6 +47,8 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            margin: 0.8rem;
+            font-size: 1.6rem;
         }
 
         strong {
@@ -56,6 +58,8 @@
 
         footer {
             align-self: stretch;
+            margin: 0.8rem;
+
 
             &.empty .progress {
                 opacity: 0.5;
@@ -86,16 +90,33 @@
         opacity: 0.6;
         line-height: 1.5rem;
     }
+    @media screen and (max-width: 900px) {
+
+        img {
+            border-radius: 0.7rem;
+            width: 10rem;
+            height: 6.4rem;
+
+        }
+
+        strong {
+            display: none;
+        }
+
+        span {
+            display: none;
+        }
+    }
 }
 
 .emptyPlayer {
     width: 100%;
     height: 20rem;
     border: 2px dashed var(--purple-300);
-    border-radius: 1.5rem;
+    border-radius: 1.6rem;
     background: linear-gradient(143.8deg, rgba(145,100,250, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 
-    padding: 4rem;
+    padding: 3.2rem;
     text-align: center;
 
     display: flex;
@@ -103,13 +124,14 @@
     justify-content: center;
 
     @media screen and (max-width: 900px) {
-        width: 4rem;
-        height: 4rem;
+        width: 10rem;
+        height: 6.4rem;
         border: 2px dashed var(--purple-300);
         border-radius: 1.5rem;
         background: linear-gradient(143.8deg, rgba(145,100,250, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 
-        padding: 2rem;
+        padding: 0rem;
+        margin: 0.8rem 0;
         text-align: center;
 
         display: flex;
@@ -117,7 +139,7 @@
         justify-content: center;
 
         strong {
-            font-size: 0.5rem;
+            font-size: 1rem;
         }
     }
 }
@@ -152,6 +174,54 @@
     justify-content: center;
     margin-top: 2.5rem;
     gap: 1.5rem;
+
+    @media screen and (max-width: 900px) {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.8rem;
+        gap: 1.5rem;
+
+        button {
+            background: transparent;
+            border: 0;
+            font-size: 0;
+
+            transition: 0.2s;
+
+            &:disabled {
+                cursor: default;
+                opacity: 0.5;
+            }
+
+            &:hover:not(:disabled) {
+                filter: brightness(0.7);
+            }
+
+            &.isAtive {
+                filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+            }
+
+            &.isAtive:hover {
+                filter: brightness(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+            }
+
+            &.playButton {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 1rem;
+                background: var(--purple-400);
+
+                &:hover:not(:disabled) {
+                    filter: brightness(0.95);
+                }
+            }
+
+
+        }
+
+    }
 
     button {
         background: transparent;

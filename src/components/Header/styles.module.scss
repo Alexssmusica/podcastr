@@ -16,4 +16,25 @@
         margin-left: auto;
         text-transform: capitalize;
     }
+    @media screen and (max-width: 900px) {
+        background: var(--white);
+        height: 6.5rem;
+        display: flex;
+        align-items: center;
+        padding: 0.8rem 1.6rem;
+        border-bottom: 1px solid var(--gray-100);
+
+        p {
+            margin-left: 2rem;
+            padding: 0.25rem 0 0.25rem 2rem;
+            border-left: 1px solid var(--gray-100);
+            font-size: 1.2rem;
+        }
+
+        span {
+            margin-left: auto;
+            text-transform: capitalize;
+            font-size: 1.4rem;
+        }
+    }
 }
