@@ -83,8 +83,13 @@
             margin: 1.5rem 0;
         }
     }
+}
+.episodeWrapper {
     @media screen and (max-width: 900px) {
         height: calc(100vh - 14.5rem);
-        overflow-y: scroll;
+        width: 100vw;
+        overflow-y: auto;
     }
+
+
 }
