@@ -27,7 +27,7 @@
                 background: var(--purple-500);
                 transform: translate(-50%, -50%);
             }
-            
+
             &:last-child {
                 right: 0;
                 top: 50%;
@@ -82,5 +82,9 @@
         p {
             margin: 1.5rem 0;
         }
+    }
+    @media screen and (max-width: 900px) {
+        height: calc(100vh - 14.5rem);
+        overflow-y: scroll;
     }
 }
